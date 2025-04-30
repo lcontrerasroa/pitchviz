@@ -3,3 +3,7 @@ praat-parselmouth
 numpy
 scipy
 plotly
+fastapi
+uvicorn
+python-multipart
+aeneas
