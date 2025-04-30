@@ -1,0 +1,5 @@
+streamlit
+praat-parselmouth
+numpy
+scipy
+plotly
