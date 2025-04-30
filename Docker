@@ -1,10 +1,15 @@
-FROM python:3.10-slim
+FROM python:3.9-slim
 
-# Install system dependencies for aeneas
+# Install system dependencies for aeneas and its build
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     espeak \
     libespeak-ng1 \
+    libsndfile1 \
+    libxml2-dev \
+    libffi-dev \
+    build-essential \
+    python3-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Set workdir
@@ -13,7 +18,7 @@ WORKDIR /app
 # Copy app files
 COPY . /app
 
-# Install Python dependencies
+# Install Python dependencies (numpy first)
 RUN pip install --no-cache-dir numpy && \
     pip install --no-cache-dir -r requirements.txt
 
