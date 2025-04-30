@@ -17,10 +17,13 @@ WORKDIR /app
 
 # Copy app files
 COPY . /app
-
 # Install Python dependencies (numpy first)
 RUN pip install --no-cache-dir numpy && \
     pip install --no-cache-dir -r requirements.txt
+
+# Install aeneas separately (after numpy is in place)
+RUN pip install --no-cache-dir aeneas
+
 
 # Expose port for Render
 EXPOSE 10000
