@@ -71,4 +71,5 @@ plotly
 
 ---
 
-Made with ❤️ by a linguist-developer for educators and researchers.
+Made with ❤️ by a linguist-developer with *loads of help from ChatGPT*
+  for educators and researchers.
