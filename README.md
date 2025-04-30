@@ -45,14 +45,12 @@ streamlit run pitchviz.py
 ---
 
 ## 📦 Requirements
-Add these to `requirements.txt`:
-```
-streamlit
-praat-parselmouth
-numpy
-scipy
-plotly
-```
+### For frontend
+pip install -r requirements-streamlit.txt
+
+### For backend (Render uses this one)
+Dockerfile + requirements.txt
+
 
 ---
 
